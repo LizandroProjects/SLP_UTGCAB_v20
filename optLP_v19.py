@@ -20,7 +20,7 @@ EQUIPE: Carlos Rodrigues Paiva
 rotina é dividida nas seguintes funções:
     
     Inputdata -> Função de leitura de dados de entrada a partir da planilha excel input na pasta de projeto
-    Hysysconect -> função usada para conecção com o HYSYS
+    Hysysconnect -> função usada para conecção com o HYSYS
     InputObjects -> função usada para criação dos objetos de comunicação
     SpecVar -> função usada para especificação de variáveis
     SpecLP -> função usada para especificações do LP [valores dos limites e cargas] de acordo com sintaxe do PULP
@@ -39,7 +39,7 @@ import numpy as np  # Bliblioteca matemática numpy
 from time import sleep # Usar a função sleep para atrasar o cálculo seguinte, se necessário
 from functions_v19 import (plot_manipuladas, # plotar manipuladas
                            Inputdata,  # Leitura de dados
-                           Hysysconect,  # COnexão com o Hysys
+                           Hysysconnect,  # COnexão com o Hysys
                            InputObjects,# Criação de objetos
                            SpecVar,  # Especificação de Variáveis
                            SpecLP,  # Montagem das variáveis do LP (PULP)
@@ -63,7 +63,7 @@ NOTA[3]: Toda função possui uma flag de saída, para indicar códigos de erros
 print('ETAPA [1]: CONEXÃO COM HYSYS PARA RODAR SIMULAÇÃO RIGOROSA')
 print('**********************************************************')
 filename = 'UTGCAB_original.hsc' # VERSÃO ATUAL DO ARQUIVO HYSYS DA SIMULAÇÃO RIGOROSA
-hconect, simCase, hyApp = Hysysconect(filename) # Conexão com hysys
+hconect, simCase, hyApp = Hysysconnect(filename) # Conexão com hysys
 resultado_rigorosa, R_especs = Sim_rigorosa(simCase) # Rodando a simulação rigorosa
 print('Fechando simulação rigorosa')
 hyApp.Quit() # Fechando a simulação rigorosa
@@ -85,7 +85,7 @@ print('ETAPA [3]: CONEXÃO COM HYSYS PARA RODAR SIMULAÇÃO ESSENCIAL')
 print('***********************************************************')
 sleep(15)  # Aguardar 15 segundos para nova conexão....da simulação Essencial (FAÇO ISSO PARA EVITAR ERRO NA COMUNICAÇÃO)
 filename = 'LP_19_vM_(newcomp).hsc'   #VERSÃO ATUAL DO ARQUIVO HYSYS DA SIMULAÇÃO ESSENCIAL'
-hconect, simCase, hyApp = Hysysconect(filename) # Conexão com hysys
+hconect, simCase, hyApp = Hysysconnect(filename) # Conexão com hysys
 print('Conexão realizada')
 print('')
 print('')

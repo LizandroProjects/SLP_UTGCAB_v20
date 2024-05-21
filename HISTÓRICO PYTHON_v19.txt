@@ -251,7 +251,7 @@ A1. INCLUSÃO DO CUSTO NA FUNÇÃO-OBJETIVO DE MODO A OTIMIZAR A MARGEM  (RECEIT
 
 A2. INVERSÃO DA ORDEM NA ROTINA OPTLP_V14:
 
- A etapa 2 (Hysysconect) agora é a etapa 1. A rotina (Inputdata) agora é a etapa 2. 
+ A etapa 2 (Hysysconnect) agora é a etapa 1. A rotina (Inputdata) agora é a etapa 2. 
 
 ####################### HISTÓRICO optLP_v13.py ##############################
 
@@ -262,7 +262,7 @@ OBS.: PARA RODAR, CONTINUAR USANDO A ROTINA optLP (é a principal). O arquivo fu
 A1. Reestruturação do código principal (optLP.py). Foram acrescentados comentários ao código para facuilitar a sua compreeensão. Essa é a rotina principal do programa para otimização da UTGCAB usando a estrtatégia de programação linear. Essa  rotina é dividida nas seguintes funções:
     
     Inputdata -> Função de leitura de dados de entrada a partir da planilha excel input na pasta de projeto
-    Hysysconect -> função usada para conecção com o HYSYS
+    Hysysconnect -> função usada para conecção com o HYSYS
     InputObjects -> função usada para criação dos objetos de comunicação
     SpecVar -> função usada para especificação de variáveis
     SpecLP -> função usada para especificações do LP [valores dos limites e cargas] de acordo com sintaze do PULP
