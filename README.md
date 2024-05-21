@@ -1,7 +1,15 @@
-# COMENTÁRIOS DO PAIVA
 
-Dia 20240430: Teste de PR para aprovação.
-Avise se você preccisou aprovar ou não.
+COMENTÁRIOS DO PAIVA
+=
+
+1. FEITO: Substituido o termo *Hysysconect* por **Hysysconnect** - foram 9 ocorrências e 3 arquivos.  
+2. A FAZER: Evitar a linha 14 do optLP_v19.py, citada a seguir:  
+       `ÚLTIMA MODIFICAÇÃO: 11 DE JANEIRO DE 2024, 11H 25 MIN.`  
+3. A FAZER: ***import matplotlib.pyplot as plt***  - é citado duas vezes, podemos suprimir a chamada do *optLP_v19.py*  
+
+
+
+
 
 ## As linhas abaixo necessitam de atenção - linha 905 do arquivo functions_v19.py
  # Versão 19 [CO2 nas URLs]

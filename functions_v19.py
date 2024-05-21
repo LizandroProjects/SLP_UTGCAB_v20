@@ -24,7 +24,7 @@ EQUIPE: Carlos Rodrigues Paiva
     SLP -> função de chamada da função de otimização Programação Linear
     SpecLP -> função usada para especificações do LP [valores dos limites e cargas] de acordo com sintaze do PULP
     SpecVar -> função usada para especificação de variáveis
-    Hysysconect -> função usada para conecção com o HYSYS
+    Hysysconnect -> função usada para conecção com o HYSYS
     Inputdata -> Função de leitura de dados de entrada a partir da planilha excel input na pasta de projeto
     SLP -> função de chamada da função de otimização Programação Linear
     SimulaLP: função para rodar Simulação Essencial usando a Programação Linear
@@ -953,11 +953,11 @@ def SpecVar(edata, obj, R_especs):
 
     return code_EspVar
 
-def Hysysconect(filename):
+def Hysysconnect(filename):
     
     '''
     *************************************************************************************************************************************
-    [1] DESCRIÇÃO: Hysysconect: Rotina para ligar o Hysys
+    [1] DESCRIÇÃO: Hysysconnect: Rotina para ligar o Hysys
     
     [2] EXPLICAÇÃO: Essa é utilizada para realizar a ativação do Hysys e comunicação com a simulação 
     
