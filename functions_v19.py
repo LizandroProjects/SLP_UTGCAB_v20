@@ -350,12 +350,12 @@ def SLP(simCase, edata, obj, R_min, R_max, R_cap, Carga, FObj_type):
         'Definição das variaveis de decisão no PULP'
                    
         G_295toGASDUC = LpVariable("Gás de 295 para GASDUC", lowBound=1e-6, upBound=GASDUC_max) # A1
-        G_295toURGN = LpVariable("Gás de 295 para URGN", lowBound=1e-6,upBound=URGN_max)        # A2
+        G_295toURGN = LpVariable("Gás de 295 para URGN", lowBound=1,upBound=URGN_max)        # A2
         G_295toURLs = LpVariable("Gás de 295 para URLs", lowBound=1e-6, upBound=URLs_max)       # A3
         G_295toUPGN = LpVariable("Gás de 295 para UPGN", lowBound=1e-6, upBound=UPGN_max)       # A4
         
         G_299toGASDUC = LpVariable("Gás de 299 para GASDUC", lowBound=1e-6, upBound=GASDUC_max) # B1
-        G_299toURGN   = LpVariable("Gás de 299 para URGN", lowBound=1e-6, upBound=URGN_max)     # B2
+        G_299toURGN   = LpVariable("Gás de 299 para URGN", lowBound=1, upBound=URGN_max)     # B2
         G_299toURLs   = LpVariable("Gás de 299 para URLs", lowBound=1e-6, upBound=URLs_max)     # B3
         G_299toUPGN   = LpVariable("Gás de 299 para UPGN", lowBound=0, upBound=UPGN_max)     # B4
         
@@ -566,7 +566,7 @@ def SLP(simCase, edata, obj, R_min, R_max, R_cap, Carga, FObj_type):
     
     return cod_SLP, model, rel_SLP
 
-def SpecLP(edata, obj):
+def SpecLP(simCase, edata, obj):
     
     '''
     *************************************************************************************************************************************
@@ -671,6 +671,8 @@ def SpecLP(edata, obj):
         "URLs_max": URLs_max,
         }
     
+    simCase.Solver.CanSolve = True
+
     G_295 = MT_main['295Gout2_BP'].MolarFlow.GetValue('m3/d_(gas)')
     G_299 = MT_main['299Gout2'].MolarFlow.GetValue('m3/d_(gas)')
     G_302 = MT_main['302Gout2'].MolarFlow.GetValue('m3/d_(gas)')
@@ -686,6 +688,8 @@ def SpecLP(edata, obj):
     
     cod_speclp=1
     
+    simCase.Solver.CanSolve = False
+
     return cod_speclp, R_min, R_max, R_cap, Carga
 
 def SpecVar(edata, obj, R_especs):
