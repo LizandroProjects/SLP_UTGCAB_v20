@@ -1,20 +1,19 @@
 \* Essencial_LP *\
 Maximize
-OBJ: 0.000926713841884 Gás_de_295_para_GASDUC
- + 0.00123411195742 Gás_de_295_para_UPGN
- + 0.00111667630505 Gás_de_295_para_URGN
- + 0.00112895163005 Gás_de_295_para_URLs
- + 0.000916260755163 Gás_de_299_para_GASDUC
- + 0.00121267037219 Gás_de_299_para_UPGN
- + 0.0011044890941 Gás_de_299_para_URGN
- + 0.00109754427889 Gás_de_299_para_URLs
- + 0.00109225106909 Gás_de_302_para_MIX
- + 0.00122537846472 Gás_de_302_para_UPGN
- + 0.00111636220227 Gás_de_302_para_URLs
+OBJ: 0.000922350552341 Gás_de_295_para_GASDUC
+ + 0.00122492756396 Gás_de_295_para_UPGN
+ + 0.00111374686235 Gás_de_295_para_URGN
+ + 0.00112288361031 Gás_de_295_para_URLs
+ + 0.000910326119144 Gás_de_299_para_GASDUC
+ + 0.00120251408278 Gás_de_299_para_UPGN
+ + 0.00110108057195 Gás_de_299_para_URGN
+ + 0.00109618525243 Gás_de_299_para_URLs + 0.0010911998961 Gás_de_302_para_MIX
+ + 0.00122434048306 Gás_de_302_para_UPGN
+ + 0.00111531583714 Gás_de_302_para_URLs
 Subject To
 Alocar_todo_o_gás_do_295_e_do_Reciclo: Gás_de_295_para_GASDUC
  + Gás_de_295_para_UPGN + Gás_de_295_para_URGN + Gás_de_295_para_URLs
- = 1924635.31256
+ = 1816025.58167
 Alocar_todo_o_gás_do_299: Gás_de_299_para_GASDUC + Gás_de_299_para_UPGN
  + Gás_de_299_para_URGN + Gás_de_299_para_URLs = 3236021.23707
 Alocar_todo_o_gás_do_302: Gás_de_302_para_MIX + Gás_de_302_para_UPGN
