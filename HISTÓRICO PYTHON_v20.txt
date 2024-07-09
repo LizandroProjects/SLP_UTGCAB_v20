@@ -3,13 +3,21 @@
 NOTA: Atualizamos para a versão 20. Essa versão já contempla as ativações e desativações das unidades e mais algumas melhorias. Estamos trabalhando com
 arquivo xml para facilitar o rastreamento. 
 
-A1. Savei uma versão do Hysys: LP_20_A.hsc e LP_20_A.xml. As duas versões são idênticas. 
+A1. Salvei uma versão do Hysys: LP_20_B.hsc e LP_20_B.xml. 
+OBS. (A versão LP_20_A.hsc está na pasta OLD_SIMULATIONS)
+
+	NOTA1: Corrigimos o spreadsheet da #Queima, que não estava especificando a fração de quaima para a corrente 295Queima_BP.
+	NOTA2: Excluí a spreadsheet Anotações e vamos relatar as anotações das modificações aqui nesse arquivo. 
+
 
 A2. Os spreasheets F_Obj e Custo estavam com problemas de conversão de unidades para o Python. O custo estava com unidade de vazão. Corrigimos esse erro, 
-considerando o custo adimensional. 
+considerando o custo adimensional, sem prejudicar a otimização. 
 
-A3. O arquivo xml demandou ativas a simulação em um ponto anterior, rotina SPECLP, linha 674. Isso ocorreu porque a simulação em xml inicia com
-vazões zeradas quando não ativa. Isso estava causando problemas nas importações das vazões das cargas dos coletores.
+A3. O arquivo xml demandou ativar a simulação em um ponto anterior, rotina SPECLP, linha 674. Isso ocorreu porque a simulação em xml inicia com
+vazões zeradas quando não ativa. Isso estava causando problemas nas importações das vazões das cargas dos coletores quando usamos o arquivo xml.
+
+A4. A unidade UPGN-II estava apresentando problemas de convergência na T-01. Notamos que para a temperatura de topo de 10 Celsius o topo da coluna apresenta vazões muito
+baixas, resultando em problemas de convergência da coluna. Corrigimos isso  mudando a posição do prato de alimentação do quinto estágio para o condensador. 
 
 
 ######################## HISTÓRICO optLP_v19_vB.py ##############################

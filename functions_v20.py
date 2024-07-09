@@ -148,7 +148,7 @@ def InputObjects(simCase):
     
     return out_obj
 
-def SLP(simCase, edata, obj, R_min, R_max, R_cap, Carga, FObj_type):
+#def SLP(simCase, edata, obj, R_min, R_max, R_cap, Carga, FObj_type):
     
     '''
     *************************************************************************************************************************************
@@ -484,6 +484,7 @@ def SLP(simCase, edata, obj, R_min, R_max, R_cap, Carga, FObj_type):
         desvio_comp = la.norm(desvio_comp)
         desvio_vazão = abs( (ZF_in - ZF_out) / ZF_out )
         desvio = desvio_vazão + desvio_comp # cálculo do desvio
+        #desvio = np.linalg.norm(dR_dF)  # Inserindo a norma das derivadas como tolerância...
         G_Rec_UPCGNs_in = G_Rec_UPCGNs_out # atualização da vazão de reciclo
         G_Rec_UPCGNs_C_in = G_Rec_UPCGNs_C_out # atualização da composição do reciclo
         
