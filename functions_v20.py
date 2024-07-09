@@ -148,7 +148,7 @@ def InputObjects(simCase):
     
     return out_obj
 
-def SLP(simCase, edata, obj, R_min, R_max, R_cap, Carga, FObj_type):
+#def SLP(simCase, edata, obj, R_min, R_max, R_cap, Carga, FObj_type):
     
     '''
     *************************************************************************************************************************************

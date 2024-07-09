@@ -43,12 +43,12 @@ from functions_v20 import (plot_manipuladas, # plotar manipuladas
                            InputObjects,# Criação de objetos
                            SpecVar,  # Especificação de Variáveis
                            SpecLP,  # Montagem das variáveis do LP (PULP)
-                           SLP, # Programação Linear Sequencial
+                           #SLP, # Programação Linear Sequencial
                            Sim_rigorosa, # Rodar simulação Rigorosa
                            f_Rel,   # Geração de Relatório da Otimização
                            f_Plot  # Plotando Resultados
                            )
-
+from optimal_SLP import (SLP)
 '''
 ****************************************************************************************************************
 NOTA[1]: O descritivo das funções está explicado no início de cada função! CHECAR NO ARQUIVO FUNCTION_V(X).PY, onde (X) é o número da versão;
@@ -84,7 +84,7 @@ print('')
 print('ETAPA [3]: CONEXÃO COM HYSYS PARA RODAR SIMULAÇÃO ESSENCIAL')
 print('***********************************************************')
 sleep(15)  # Aguardar 15 segundos para nova conexão....da simulação Essencial (FAÇO ISSO PARA EVITAR ERRO NA COMUNICAÇÃO)
-filename = 'LP_20_vA.xml'   #VERSÃO ATUAL DO ARQUIVO HYSYS DA SIMULAÇÃO ESSENCIAL'
+filename = 'LP_20_vB.hsc'   #VERSÃO ATUAL DO ARQUIVO HYSYS DA SIMULAÇÃO ESSENCIAL'
 hconect, simCase, hyApp = Hysysconnect(filename) # Conexão com hysys
 print('Conexão realizada')
 print('')
